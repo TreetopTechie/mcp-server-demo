@@ -1,3 +1,4 @@
 # Ignore Semgrep logs and version files
 semgrep.log
 semgrep.version
+/frontend/node_modules
