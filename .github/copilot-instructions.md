@@ -19,19 +19,14 @@ This rule ensures that all dependency changes are evaluated for risk at the time
 
 Whenever a supported source code file is modified:
 
-1. Ensure Semgrep is installed and available at version 1.99.0.
-   - If Semgrep is not installed or the version is incorrect, prompt the user to install it.
-   - Do not proceed with the scan unless Semgrep is available and valid.
-   - To install Semgrep, the user must have a working Python environment with pip. Recommend installing version 1.99.0.
+1. Use the MCP server `endor-cli-tools` using the tool `scan` to perform a SAST scan on the modified source files.
 
-2. Use the MCP server `endor-cli-tools` using the tool `scan` to perform a SAST scan on the modified source files.
-
-3. If any vulnerabilities are found:
+2. If any vulnerabilities are found:
    - Present the issues to the user.
    - Recommend appropriate fixes (e.g., input sanitization, validation, escaping, secure APIs).
    - Continue scanning until all critical issues have been resolved.
 
-This rule ensures all code changes are automatically reviewed for common security vulnerabilities using `endor-cli-tools` and the MCP server, with Semgrep as the underlying engine.
+This rule ensures all code changes are automatically reviewed for common security vulnerabilities using `endor-cli-tools` and the MCP server, with Opengrep as the underlying engine.
 
 # Leaked Secrets Detection Rule
 
